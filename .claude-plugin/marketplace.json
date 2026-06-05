@@ -9,8 +9,8 @@
     {
       "name": "urdesigner",
       "source": {
-        "source": "github",
-        "repo": "alisuleymantopuz/urdesigner"
+        "source": "url",
+        "url": "https://github.com/alisuleymantopuz/urdesigner.git"
       },
       "description": "Code-grounded product design and estimation. Reads your codebase before speccing or estimating — never invents. Skills: /spec, /epic, /story, /estimate.",
       "version": "0.1.0",
