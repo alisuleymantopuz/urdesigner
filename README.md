@@ -1,5 +1,12 @@
 # urdesigner
 
+[![CI](https://github.com/alisuleymantopuz/urdesigner/actions/workflows/ci.yml/badge.svg)](https://github.com/alisuleymantopuz/urdesigner/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Version](https://img.shields.io/github/v/tag/alisuleymantopuz/urdesigner?label=version)](https://github.com/alisuleymantopuz/urdesigner/releases)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-blueviolet)](https://github.com/alisuleymantopuz/urdesigner)
+[![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-extension-blue)](https://github.com/alisuleymantopuz/urdesigner)
+[![Cursor](https://img.shields.io/badge/Cursor-plugin-black)](https://github.com/alisuleymantopuz/urdesigner)
+
 Code-grounded product design and estimation for engineering teams.
 
 Reads your codebase before speccing or estimating. Never invents architecture it hasn't seen. Uses senior engineering personas that cite evidence, surface risks, and mark "NEEDS SPIKE" when uncertain. Saves every artifact to dated files in `docs/` so outputs persist across sessions.
