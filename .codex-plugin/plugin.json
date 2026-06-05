@@ -1,0 +1,23 @@
+{
+  "name": "urdesigner",
+  "version": "0.1.0",
+  "description": "Code-grounded product design and estimation for engineering teams. Reads your codebase before speccing or estimating — never invents.",
+  "author": {
+    "name": "urdesigner"
+  },
+  "keywords": ["design", "estimation", "planning", "product", "spec", "epic", "story"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "UR Designer",
+    "shortDescription": "Code-grounded design and estimation.",
+    "longDescription": "Reads your codebase before producing any spec or estimate. Four skills: /spec (Staff Engineer + Design Lead), /epic (prioritized epic breakdown), /story (user stories with acceptance criteria), /estimate (four-persona estimation with divergence detection). Never invents architecture it hasn't seen.",
+    "category": "Coding",
+    "capabilities": ["Interactive", "Read"],
+    "defaultPrompt": [
+      "/spec a new feature",
+      "/epic break down the spec",
+      "/story decompose an epic",
+      "/estimate a user story"
+    ]
+  }
+}

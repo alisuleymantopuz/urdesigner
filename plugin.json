@@ -1,0 +1,10 @@
+{
+  "name": "urdesigner",
+  "displayName": "UR Designer",
+  "version": "0.1.0",
+  "description": "Code-grounded product design and estimation for engineering teams. Reads your codebase before speccing or estimating — never invents.",
+  "author": {
+    "name": "urdesigner"
+  },
+  "keywords": ["design", "estimation", "planning", "product", "spec", "epic", "story"]
+}

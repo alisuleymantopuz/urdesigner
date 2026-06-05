@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON manifests
+        run: |
+          echo "Checking plugin.json..."
+          jq . plugin.json > /dev/null
+          echo "Checking .cursor-plugin/plugin.json..."
+          jq . .cursor-plugin/plugin.json > /dev/null
+          echo "Checking .codex-plugin/plugin.json..."
+          jq . .codex-plugin/plugin.json > /dev/null
+          echo "Checking gemini-extension.json..."
+          jq . gemini-extension.json > /dev/null
+          echo "All JSON manifests valid."
+
+      - name: Check version sync across manifests
+        run: |
+          V1=$(jq -r '.version' plugin.json)
+          V2=$(jq -r '.version' .cursor-plugin/plugin.json)
+          V3=$(jq -r '.version' .codex-plugin/plugin.json)
+          V4=$(jq -r '.version' gemini-extension.json)
+
+          if [ "$V1" != "$V2" ] || [ "$V1" != "$V3" ] || [ "$V1" != "$V4" ]; then
+            echo "Version mismatch detected:"
+            echo "  plugin.json:               $V1"
+            echo "  .cursor-plugin/plugin.json: $V2"
+            echo "  .codex-plugin/plugin.json:  $V3"
+            echo "  gemini-extension.json:      $V4"
+            exit 1
+          fi
+          echo "All manifests at version $V1."
+
+      - name: Check skill structure
+        run: |
+          for skill in spec epic story estimate; do
+            if [ ! -f "skills/$skill/SKILL.md" ]; then
+              echo "Missing: skills/$skill/SKILL.md"
+              exit 1
+            fi
+            if ! grep -q "^name:" "skills/$skill/SKILL.md"; then
+              echo "Missing 'name:' frontmatter in skills/$skill/SKILL.md"
+              exit 1
+            fi
+            if ! grep -q "^description:" "skills/$skill/SKILL.md"; then
+              echo "Missing 'description:' frontmatter in skills/$skill/SKILL.md"
+              exit 1
+            fi
+          done
+          echo "All skills present and valid."
+
+      - name: Check agent frontmatter
+        run: |
+          for agent in agents/*.md; do
+            if ! grep -q "^name:" "$agent"; then
+              echo "Missing 'name:' frontmatter in $agent"
+              exit 1
+            fi
+            if ! grep -q "^description:" "$agent"; then
+              echo "Missing 'description:' frontmatter in $agent"
+              exit 1
+            fi
+            if ! grep -q "^model:" "$agent"; then
+              echo "Missing 'model:' frontmatter in $agent"
+              exit 1
+            fi
+          done
+          echo "All agent files valid."

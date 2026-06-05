@@ -1,0 +1,6 @@
+{
+  "name": "urdesigner",
+  "version": "0.1.0",
+  "description": "Code-grounded product design and estimation for engineering teams. Reads your codebase before speccing or estimating — never invents.",
+  "contextFileName": "GEMINI.md"
+}
