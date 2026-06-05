@@ -23,6 +23,8 @@ jobs:
           jq . .codex-plugin/plugin.json > /dev/null
           echo "Checking gemini-extension.json..."
           jq . gemini-extension.json > /dev/null
+          echo "Checking .claude-plugin/marketplace.json..."
+          jq . .claude-plugin/marketplace.json > /dev/null
           echo "All JSON manifests valid."
 
       - name: Check version sync across manifests

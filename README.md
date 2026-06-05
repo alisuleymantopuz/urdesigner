@@ -17,7 +17,9 @@ Reads your codebase before speccing or estimating. Never invents architecture it
 
 | Platform | Install |
 |----------|---------|
-| Claude Code | `claude plugin install ./urdesigner` |
+| Claude Code (marketplace) | `/plugin marketplace add alisuleymantopuz/urdesigner` then `/plugin install urdesigner@urdesigner` |
+| Claude Code (GitHub) | `claude plugin install github:alisuleymantopuz/urdesigner` |
+| Claude Code (local) | `claude plugin install ./urdesigner` |
 | Cursor | Install via Cursor plugin marketplace or point to `.cursor-plugin/` |
 | Codex | Install via Codex plugin marketplace or point to `.codex-plugin/` |
 | Gemini CLI | `gemini extensions install ./urdesigner` or `gemini extensions link ./urdesigner` |

@@ -1,0 +1,28 @@
+{
+  "name": "urdesigner",
+  "owner": {
+    "name": "Ali Suleyman Topuz",
+    "email": "alisuleymantopuz@gmail.com"
+  },
+  "description": "Code-grounded product design and estimation for engineering teams.",
+  "plugins": [
+    {
+      "name": "urdesigner",
+      "source": {
+        "source": "github",
+        "repo": "alisuleymantopuz/urdesigner"
+      },
+      "description": "Code-grounded product design and estimation. Reads your codebase before speccing or estimating — never invents. Skills: /spec, /epic, /story, /estimate.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ali Suleyman Topuz",
+        "email": "alisuleymantopuz@gmail.com"
+      },
+      "homepage": "https://github.com/alisuleymantopuz/urdesigner",
+      "repository": "https://github.com/alisuleymantopuz/urdesigner",
+      "license": "MIT",
+      "keywords": ["design", "estimation", "planning", "product", "spec", "epic", "story"],
+      "category": "productivity"
+    }
+  ]
+}
