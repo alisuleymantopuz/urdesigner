@@ -10,6 +10,7 @@
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-blueviolet)](https://github.com/alisuleymantopuz/urdesigner)
 [![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-extension-blue)](https://github.com/alisuleymantopuz/urdesigner)
 [![Cursor](https://img.shields.io/badge/Cursor-plugin-black)](https://github.com/alisuleymantopuz/urdesigner)
+[![Agensi](https://img.shields.io/badge/Agensi-free%20skill-0ea5e9)](https://www.agensi.io/skills/urdesigner)
 
 Code-grounded product design and estimation for engineering teams.
 
@@ -27,6 +28,7 @@ Reads your codebase before speccing or estimating. Never invents architecture it
 | Cursor | Install via Cursor plugin marketplace or point to `.cursor-plugin/` |
 | Codex | Install via Codex plugin marketplace or point to `.codex-plugin/` |
 | Gemini CLI | `gemini extensions install ./urdesigner` or `gemini extensions link ./urdesigner` |
+| Agensi (20+ agents) | Use it free from the [Agensi listing](https://www.agensi.io/skills/urdesigner) with any connected agent |
 
 ---
 
