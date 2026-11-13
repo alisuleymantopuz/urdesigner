@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="urdesigner logo" width="128" height="128">
+</p>
+
 # urdesigner
 
 [![CI](https://github.com/alisuleymantopuz/urdesigner/actions/workflows/ci.yml/badge.svg)](https://github.com/alisuleymantopuz/urdesigner/actions/workflows/ci.yml)
